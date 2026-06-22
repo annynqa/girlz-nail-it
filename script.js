@@ -10,7 +10,10 @@ const fortunes = [
   "Skočí na větev: Nové přátelství roste, zalévej ho pozorností.",
   "Oříšek života: Nečekané štěstí přijde v malé ceremonii.",
   "Veverka si chroupá: Sdílej radost, a bude větší.",
-  "Šeptá v koruně: Dnes je den na plány, ne na strachy."
+  "Šeptá v koruně: Dnes je den na plány, ne na strachy.",
+  "Veverka čiluje: Energie v tobě probouzí nový sen.",
+  "Tichý skryj: Poslouchej svůj vnitřní hlas, má ti co říct.",
+  "Slunce v korunách: Světlo přichází po temnu, čekej trpělivě."
 ];
 
 let nutCount = 5;
@@ -82,31 +85,61 @@ function pickFortune(){
 const loveFortunes = [
   "Láska roste, pečuj o ni a bude silnější.",
   "Nové setkání může začít u nečekaného rozhovoru.",
-  "Malý krok k druhému přinese velké porozumění."
+  "Malý krok k druhému přinese velké porozumění.",
+  "Otevřenost srdce přilákne právě tu správnou osobu.",
+  "Komunikace je klíčem — mluvit se odvažuj.",
+  "Stará přátelství se mohou proměnit v cosi hlubšího.",
+  "Čekej a pozoruj — někdo tě už vidí jinak.",
+  "Láska přichází v neočekávaném čase a místě.",
+  "Vyjádři to, co cítíš — ticho bude litovat.",
+  "Vzájemnost začíná jedním upřímným gestem."
 ];
+
 const workFortunes = [
   "V práci přijde moment, kdy se tvoje snaha projeví.",
   "Něco nového ti otevře dveře — buď připraven.",
-  "Drobné zlepšení dnes znamená velký skok později."
+  "Drobné zlepšení dnes znamená velký skok později.",
+  "Tvůj talent je viděn — příležitost se blíží.",
+  "Nový projekt přinese zadostiučinění a rozvoj.",
+  "Spolupráce s někým neočekávaným přinese překvapení.",
+  "Tvá iniciativa se nebude ignorovat — počkej na vysvětlení.",
+  "Výzva, která se blíží, je tvou cestou ke zlepšení.",
+  "Kreativita teď padne na úrodnou půdu.",
+  "Uznání přijde z místa, kde to nečekáš.",
+  "Změna v práci bude pozitivní — přizpůsob se pružně."
 ];
+
 const moneyFortunes = [
   "Pečlivost pomůže udržet finance v klidu.",
   "Příležitost k menšímu zisku brzo zaklepe na dveře.",
-  "Investuj čas do plánování, ne do spěchu."
+  "Investuj čas do plánování, ne do spěchu.",
+  "Peníze přijdou neočekávaně — věř v tok.",
+  "Lepší doba finančně se blíží — trpělivě čekej.",
+  "Malá úspora dnes = velká svoboda zítřítko.",
+  "Nečekej na zázrak — sám si jej vytvoř.",
+  "Hodnota tvé práce vzroste, když bude zřejmá.",
+  "Finanční stabilitu najdeš v jednoduchosti a moudrosti."
 ];
+
 const travelFortunes = [
   "Krátký výlet přinese nové nápady a odpočinek.",
   "Cesta, i malá, změní tvůj pohled k lepšímu.",
-  "Buď otevřený novým směrům — přinesou inspiraci."
+  "Buď otevřený novým směrům — přinesou inspiraci.",
+  "Sjednocení s přírodou vyčistí tvou mysl.",
+  "Putování ti otevře oči na věci, co vždy chyběly.",
+  "Destinace je méně důležitá než cesta samotná.",
+  "Někde čeká zážitek, kterou si vůbec nepředstavuješ.",
+  "Cestování ti přinese příběhy, ne jen fotografie."
 ];
+
 const generalFortunes = fortunes;
 
 function pickByQuestion(q){
   const t = q.toLowerCase();
-  if(/(lás|srd|mil|partner|laska|partnerka|partner)/i.test(t)) return loveFortunes[Math.floor(Math.random()*loveFortunes.length)];
-  if(/(práce|job|kariér|zaměstn|šéf|prace|brigad)/i.test(t)) return workFortunes[Math.floor(Math.random()*workFortunes.length)];
-  if(/(peníze|peneze|finance|výdělek|plat|měna|peníze)/i.test(t)) return moneyFortunes[Math.floor(Math.random()*moneyFortunes.length)];
-  if(/(cest|cesta|dálka|dovolen|vylet|cesta)/i.test(t)) return travelFortunes[Math.floor(Math.random()*travelFortunes.length)];
+  if(/(lás|srd|mil|partner|laska|partnerka|partner|cit|srdce)/i.test(t)) return loveFortunes[Math.floor(Math.random()*loveFortunes.length)];
+  if(/(práce|job|kariér|zaměstn|šéf|prace|brigad|práca|projek)/i.test(t)) return workFortunes[Math.floor(Math.random()*workFortunes.length)];
+  if(/(peníze|peneze|finance|výdělek|plat|měna|peníze|mzda|výděl)/i.test(t)) return moneyFortunes[Math.floor(Math.random()*moneyFortunes.length)];
+  if(/(cest|cesta|dálka|dovolen|vylet|cesta|cestuj|putov)/i.test(t)) return travelFortunes[Math.floor(Math.random()*travelFortunes.length)];
   // default: use a general fortune
   return generalFortunes[Math.floor(Math.random()*generalFortunes.length)];
 }
