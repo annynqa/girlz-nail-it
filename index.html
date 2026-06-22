@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vevrčí věštírna</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Vevrčí věštírna <span class="squirrel" id="squirrel">🐿️</span></h1>
+
+    <section class="card">
+      <div class="stage">
+        <div class="big-stage" id="bigSquirrel">
+          <div class="squirrel-face" id="squirrelFace">🐿️</div>
+          <div class="tree-area">
+            <div class="tree" id="tree" aria-hidden="true">
+              <div class="tree-top">🌳</div>
+              <div class="tree-nuts">
+                <button class="tree-nut" data-index="1">🌰</button>
+                <button class="tree-nut" data-index="2">🌰</button>
+                <button class="tree-nut" data-index="3">🌰</button>
+                <button class="tree-nut" data-index="4">🌰</button>
+                <button class="tree-nut" data-index="5">🌰</button>
+              </div>
+            </div>
+
+          </div>
+          <div class="flying-nut" id="flyingNut" aria-hidden="true">🌰</div>
+        </div>
+      </div>
+      <div id="fortune" class="fortune">Stiskni tlačítko nebo napiš otázku a veverka odpoví…</div>
+
+      <div class="question">
+        <label for="questionInput" class="visually-hidden">Tvoje otázka</label>
+        <input id="questionInput" class="question-input" type="text" placeholder="Napiš otázku o blízké budoucnosti...">
+        <button id="askBtn" class="btn">Zeptat se</button>
+      </div>
+
+      <div class="actions">
+        <button id="tellBtn" class="btn">Získat věštbu</button>
+        <button id="refillBtn" class="btn ghost">Přidat lískové oříšky</button>
+      </div>
+      <div class="nuts" id="nuts" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
