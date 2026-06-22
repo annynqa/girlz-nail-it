@@ -21,7 +21,6 @@ let nutCount = 5;
 const nutsEl = document.getElementById('nuts');
 const fortuneEl = document.getElementById('fortune');
 const tellBtn = document.getElementById('tellBtn');
-const refillBtn = document.getElementById('refillBtn');
 const squirrelEl = document.getElementById('squirrel');
 const bigSquirrel = document.getElementById('bigSquirrel');
 const flyingNut = document.getElementById('flyingNut');
@@ -217,12 +216,7 @@ askBtn.addEventListener('click', ()=>{
   }
 });
 
-refillBtn.addEventListener('click', ()=>{
-  nutCount = nutCount + 5;
-  tellBtn.disabled = false;
-  tellBtn.textContent = 'Získat věštbu';
-  renderNuts();
-});
+// Nuts are replenished by collecting from the tree; manual refill removed
 
 // initial render
 renderNuts();
